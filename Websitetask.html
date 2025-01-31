@@ -4,59 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mini Website Task</title>
+    <style>
+        /* Basic styling for header, navbar, and footer */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .container {
+            padding: 20px;
+        }
+        .service-list {
+            list-style-type: square;
+            margin: 10px 0;
+        }
+    </style>
 </head>
 <body>
+
     <header>
-    <h1>Welcome to My Website</h1>
-    <a href = "https://codegnan.com/">Home </a><br>
-    <a href ="https://codegnan.com/about-us/">About</a><br>
-    <a href ="https://codegnan.com/contact-us/">Contact</a><br><br>
+        <h1>Welcome to My Website</h1>
+    </header>
 
-</header>
-    <b> About Us</b><br><br>
-      <!-- How to use image tag -->
-      <img src="img1.png"
-      alt="It is cute" 
-     height="700"
-     width="800">
+    <!-- Navbar -->
+    <nav>
+        <a href="https://codegnan.com/">Home</a>
+        <a href="https://codegnan.com/about-us/">About</a>
+        <a href="https://codegnan.com/contact-us/">Contact</a>
+    </nav>
 
+    <div class="container">
+        <!-- About Us Section -->
+        <h2>About Us</h2>
+        <img src="img1.png" alt="It is cute" height="700" width="800"><br><br>
 
-     <img src="img1.png" alt="it is cute"  height="700" width="800">
-     <!-- when src is not working properly we use alt  -->
-     <img src=" " alt="it is cute"  height="700" width="800">
-    <p>We are a company dedicated to providing the best services</p><br><br>
+        <!-- Image with missing src to show alt text -->
+        <img src="" alt="It is cute" height="700" width="800"><br><br>
 
-    <!-- in unordered list we can change the symbols using type = square,disc circle -->
-    <b>Our Services</b>
-    <ul type="square">
-        <li>Web development</li>
-        <li>Graphic design </li>
-        <li>SEO Optimization </li>
-    </ul><br>
+        <p>We are a company dedicated to providing the best services.</p><br><br>
 
+        <!-- Services Section -->
+        <h3>Our Services</h3>
+        <ul class="service-list">
+            <li>Web development</li>
+            <li>Graphic design</li>
+            <li>SEO Optimization</li>
+        </ul><br>
 
-    <ul type="disc">
-        <li>Web development</li>
-        <li>Graphic design </li>
-        <li>SEO Optimization </li>
-    </ul><br>
+        <ul class="service-list" style="list-style-type: disc;">
+            <li>Web development</li>
+            <li>Graphic design</li>
+            <li>SEO Optimization</li>
+        </ul><br>
 
-    <ul type="circle">
-        <li>Web development</li>
-        <li>Graphic design </li>
-        <li>SEO Optimization </li>
-    </ul><br>
-       
+        <ul class="service-list" style="list-style-type: circle;">
+            <li>Web development</li>
+            <li>Graphic design</li>
+            <li>SEO Optimization</li>
+        </ul><br>
+    </div>
 
-        <footer>
-            <h2>&copy; 2023 My Website.All right are reserved</h2>
-            <nav>
-            <ul>
-                <li><a href ="privacy policy">Privacy Policy</a></li>
-                <li><a href="Terms of services">Terms of Service</a></li>
+    <!-- Footer -->
+    <footer>
+        <h2>&copy; 2023 My Website. All rights reserved</h2>
+        <nav>
+            <ul style="list-style-type: none; padding: 0;">
+                <li style="display: inline; margin-right: 15px;">
+                    <a href="privacy-policy">Privacy Policy</a>
+                </li>
+                <li style="display: inline;">
+                    <a href="terms-of-service">Terms of Service</a>
+                </li>
             </ul>
         </nav>
-        </footer>
+    </footer>
 
 </body>
 </html>
