@@ -3,25 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SignUpFormt</title>
 </head>
 <body>
     <form  action="" method="">
+        <!-- Text Input -->
         <label for="Text Input">Text Input:</label>
-        <input type="text" id="Text Input" name="Text Input" required><br><br>
+        <input type="text" id="Text Input" name="Text Input" placeholder="Enter the text" required><br><br>
+        <!-- Emaill Input -->
         <label for ="Email">Email:</label>
         <input type="text" id = "Email" name ="Email" required><br><br>
+
+        <!-- Password Input -->
         <label for = "Password">Password:</label>
         <input type = "text" id = "Password" name = "password " required><br><br>
+
+        <!-- Number Input -->
         <label for="Number">Number</label>  
-        <input type = "text" id = "Number" name = "Number " required><br><br>
+        <input type = "text" id = "Number" name = "Number " min ="1" max ="100" required><br><br>
+
+        <!-- DATE INPUT -->
         <label for="Date">Date</label>  
         <input type="date" name="date" id="date"><br><br>
+
+        <!-- Time Input -->
         <label for="time">Input Time:</label>
         <input type="time" name="time" id="time"><br><br>
+
+        <!-- CheckBox input -->
         <label for="Subscribe">Subscribe:</label>
         <input type="checkbox" name="subscribe" id="subscribe"><br><br>
 
+        <!-- Color input -->
+         <label for="Color">Color:</label>
+         <input type="color" name="color" id="color"><br><br>
+
+      <!-- Radiobuttons -->
+        <label for="Gender">Gender:</label><br>
+       <input type="radio" id="male" name="gender" value="male">
+       <label for="male">Male</label><br>
+       <input type="radio" id="female" name="gender" value="female">
+       <label for="female">Female</label><br>
 
         <button>SUBMIT</button><br><br>
 
