@@ -7,6 +7,13 @@
 
     <!-- Internal CSS -->
     <style>
+        /* Universal Selector: Applies styles to all elements */
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
         /* Type Selector: Applies styles to all h1 elements */
         h1 {
             color: red;
@@ -33,6 +40,29 @@
             padding: 10px;
             border-radius: 5px;
         }
+
+        /* Descendant Selector (space): Selects all <p> inside <div> */
+        div p {
+            color: brown;
+            font-style: italic;
+        }
+
+        /* Child Selector (>): Selects direct child <p> inside <div> */
+        div > p {
+            background-color: lightblue;
+            padding: 5px;
+        }
+
+        /* Attribute Selector: Selects input elements with type="text" */
+        input[type="text"] {
+            border: 2px solid blue;
+            padding: 5px;
+        }
+
+        /* Grouping Selector: Applies same styles to multiple elements */
+        h1, p, div {
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
@@ -50,6 +80,21 @@
 
     <!-- ID Selector applied to this element -->
     <p id="special">This is a paragraph with an ID selector.</p>
+
+    <!-- Descendant and Child Selector Example -->
+    <div>
+        <p>This paragraph inside a div is selected by the descendant selector.</p>
+        <section>
+            <p>This paragraph inside a section inside div is NOT affected by the child selector.</p>
+        </section>
+    </div>
+
+    <!-- Attribute Selector Example -->
+    <form>
+        <label>Enter Name:</label>
+        <input type="text" placeholder="Enter your name">
+        <input type="submit" value="Submit">
+    </form>
 
 </body>
 </html>
