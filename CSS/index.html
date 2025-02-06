@@ -3,18 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- InternAL  CSS With example-->
-     <style>
-        h1{
-            color:red
+    <title>CSS Selectors Example</title>
+
+    <!-- Internal CSS -->
+    <style>
+        /* Type Selector: Applies styles to all h1 elements */
+        h1 {
+            color: red;
+            text-align: center;
         }
-     </style>
-     <!-- link tag used to linking the external file    external CSS-->
-     <link rel ="stylesheet" href = "style.css">
+
+        /* Type Selector: Applies styles to all div elements */
+        div {
+            color: rebeccapurple;
+            font-size: 20px;
+        }
+
+        /* Class Selector: Targets elements with class "blue-text" */
+        .blue-text {
+            color: blue;
+            font-weight: bold;
+        }
+
+        /* ID Selector: Targets a unique element with id "special" */
+        #special {
+            color: green;
+            font-size: 22px;
+            background-color: lightgray;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
-    <!-- Inline css -->
+
+    <!-- Inline CSS Example -->
     <h1 style="background-color: rebeccapurple;">Hello World</h1>
+
+    <!-- Type Selector applied to all <div> elements -->
+    <div>This is a div element</div>
+    <div>This is another div element</div>
+
+    <!-- Class Selector applied to these elements -->
+    <p class="blue-text">This is a paragraph with class selector.</p>
+    <span class="blue-text">This is a span with class selector.</span>
+
+    <!-- ID Selector applied to this element -->
+    <p id="special">This is a paragraph with an ID selector.</p>
+
 </body>
 </html>
