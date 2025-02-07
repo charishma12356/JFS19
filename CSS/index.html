@@ -9,9 +9,6 @@
     <style>
         /* Universal Selector: Applies styles to all elements */
         * {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
         }
 
         /* Type Selector: Applies styles to all h1 elements */
@@ -35,10 +32,7 @@
         /* ID Selector: Targets a unique element with id "special" */
         #special {
             color: green;
-            font-size: 22px;
-            background-color: lightgray;
-            padding: 10px;
-            border-radius: 5px;
+           
         }
 
         /* Descendant Selector (space): Selects all <p> inside <div> */
@@ -59,6 +53,13 @@
             padding: 5px;
         }
 
+              /* Pseudo selectors+Pseudo-element selectors: apply style based on the position  */
+
+
+
+
+
+
         /* Grouping Selector: Applies same styles to multiple elements */
         h1, p, div {
             margin-bottom: 10px;
@@ -70,18 +71,18 @@
     <!-- Inline CSS Example -->
     <h1 style="background-color: rebeccapurple;">Hello World</h1>
 
-    <!-- Type Selector applied to all <div> elements -->
+    <!-- Type Selector  -->
     <div>This is a div element</div>
     <div>This is another div element</div>
 
-    <!-- Class Selector applied to these elements -->
+    <!-- Class Selector  -->
     <p class="blue-text">This is a paragraph with class selector.</p>
     <span class="blue-text">This is a span with class selector.</span>
 
-    <!-- ID Selector applied to this element -->
+    <!-- ID Selector  -->
     <p id="special">This is a paragraph with an ID selector.</p>
 
-    <!-- Descendant and Child Selector Example -->
+    <!-- Descendant  -->
     <div>
         <p>This paragraph inside a div is selected by the descendant selector.</p>
         <section>
