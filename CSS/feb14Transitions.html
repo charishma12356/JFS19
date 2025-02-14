@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            border: 1px solid purple;
+            transition: background-color 5s ease 5s, 
+                        border-radius 2s ease, 
+                        font-size 1s ease, 
+                        font-family 1s ease;
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .box:hover{
+            background-color: lightgreen;
+            font-size: 24px;
+            font-family: 'Times New Roman', serif;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">Hover me!</div>
+</body>
+</html>
