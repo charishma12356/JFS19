@@ -10,21 +10,26 @@
             height: 100px;
             background-color: lightblue;
             border: 1px solid purple;
-            transition: background-color 5s ease 5s, 
-                        border-radius 2s ease, 
-                        font-size 1s ease, 
-                        font-family 1s ease;
             font-size: 16px;
             font-family: Arial, sans-serif;
+            font-style: normal;
             display: flex;
             align-items: center;
             justify-content: center;
+            transition: background-color 5s ease 5s, 
+                        border-radius 2s ease, 
+                        font-size 1s ease, 
+                        font-family 1s ease, 
+                        transform 1s ease, 
+                        font-style 2s ease;
         }
-        .box:hover{
+        .box:hover {
             background-color: lightgreen;
             font-size: 24px;
             font-family: 'Times New Roman', serif;
             border-radius: 20px;
+            font-style: italic;
+            transform: scale(0.5) rotate(45deg);
         }
     </style>
 </head>
