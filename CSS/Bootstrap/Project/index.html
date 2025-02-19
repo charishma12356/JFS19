@@ -3,144 +3,225 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amazon Prime</title>
+    <title>Prime Video</title>
     <style>
         /* Global Styles */
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            background: linear-gradient(to right, #131a22, #232f3e);
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #000;
             color: white;
         }
 
         /* Header Section */
         header {
-            background: #232f3e;
-            padding: 20px;
-            text-align: center;
+            background: #131921;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
             position: relative;
         }
 
-        header h1 {
-            font-size: 3em;
-            color: #f2a900;
-            transition: all 0.3s ease;
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: white;
         }
 
-        header h1:hover {
-            color: #ffffff;
-            transform: scale(1.1);
-        }
-
-        .nav-links {
+        nav {
             display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-top: 10px;
+            gap: 20px;
+            align-items: center;
         }
 
-        .nav-links a {
+        nav a {
             color: white;
             text-decoration: none;
-            font-size: 1.1em;
-            transition: all 0.3s ease;
+            font-size: 1em;
+            padding: 10px;
+            transition: 0.3s;
         }
 
-        .nav-links a:hover {
+        nav a:hover {
             color: #f2a900;
-            transform: scale(1.1);
+        }
+
+        .nav-icon {
+            font-size: 1.2em;
+            color: white;
+            cursor: pointer;
+        }
+
+        .join-prime {
+            background: #0073e6;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .join-prime:hover {
+            background: #005bb5;
+        }
+
+        /* Language Dropdown */
+        .language-menu {
+            display: none;
+            position: absolute;
+            top: 50px;
+            right: 150px;
+            background: rgba(30, 30, 30, 0.9);
+            padding: 15px;
+            border-radius: 10px;
+            width: 300px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .language-menu.show {
+            display: block;
+        }
+
+        .language-menu div {
+            padding: 8px;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .language-menu div:hover {
+            color: #f2a900;
         }
 
         /* Hero Section */
         .hero {
-            height: 300px;
-            background: url('https://via.placeholder.com/1500x800') no-repeat center center/cover;
             display: flex;
             align-items: center;
-            justify-content: center;
-            text-align: center;
-            position: relative;
-            transition: all 0.5s ease-in-out;
+            justify-content: space-between;
+            padding: 50px 10%;
         }
 
-        .hero:hover {
-            filter: brightness(70%);
+        .hero-text {
+            flex: 1;
+            margin-right: 50px;
         }
 
-        .hero h2 {
+        .hero-text h1 {
             font-size: 2.5em;
-            margin: 0;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        .hero-text p {
+            margin: 20px 0;
+            font-size: 1.2em;
+        }
+
+        .hero-text .btn {
+            background: white;
+            color: black;
+            padding: 10px 15px;
+            font-size: 1em;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .hero-text .btn:hover {
+            background: #f2a900;
+        }
+
+        .hero-images {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .hero-images img {
+            width: 150px;
+            height: 220px;
+            border-radius: 5px;
+            object-fit: cover;
         }
 
         /* Footer Section */
         footer {
-            background: #131a22;
-            padding: 20px;
-            text-align: center;
-            position: relative;
-        }
-
-        footer p {
+            background: #131921;
             color: #bbb;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
         }
 
-        /* Media Queries */
         @media screen and (max-width: 768px) {
-            header h1 {
-                font-size: 2.5em;
-            }
-
-            .nav-links {
-                flex-direction: column;
-                gap: 15px;
-            }
-
             .hero {
-                height: 250px;
+                flex-direction: column;
+                text-align: center;
             }
 
-            .hero h2 {
-                font-size: 2em;
-            }
-        }
-
-        @media screen and (max-width: 480px) {
-            header h1 {
-                font-size: 2em;
-            }
-
-            .hero h2 {
-                font-size: 1.5em;
+            .hero-text {
+                margin-right: 0;
             }
         }
     </style>
 </head>
 <body>
-
-    <!-- Header Section -->
     <header>
-        <h1>Amazon Prime</h1>
-        <div class="nav-links">
+        <div class="logo">prime video</div>
+        <nav>
             <a href="#">Home</a>
             <a href="#">Movies</a>
             <a href="#">TV Shows</a>
-            <a href="#">Your Account</a>
-        </div>
+            <a href="#">Live TV</a>
+            <a href="#"><span class="nav-icon">&#x229E;</span> Subscriptions</a>
+            <span class="nav-icon">🔍</span>
+            <span class="nav-icon" id="language-toggle">🌐 EN ▼</span>
+            <span class="nav-icon">⏹️</span>
+            <a href="#" class="join-prime">Join Prime</a>
+        </nav>
     </header>
 
-    <!-- Hero Section -->
-    <div class="hero">
-        <h2>Unlimited Movies and TV Shows</h2>
+    <div class="language-menu" id="language-menu">
+        <div>English</div>
+        <div>Español</div>
+        <div>Français</div>
+        <div>Deutsch</div>
+        <div>हिन्दी</div>
+        <div>中文</div>
+        <div>العربية</div>
+        <div>Português</div>
+        <div>Русский</div>
+        <div>日本語</div>
+        <div>한국어</div>
     </div>
 
-    <!-- Footer Section -->
+    <div class="hero">
+        <div class="hero-text">
+            <h1>Welcome to Prime Video</h1>
+            <p>Join Prime to watch the latest movies, TV shows and award-winning Amazon Originals</p>
+            <a href="#" class="btn">Sign in to join Prime</a>
+        </div>
+        <div class="hero-images">
+            <img src="gamechangers.jpg" alt="Game Changer">
+            <img src="BABYJHON.jpeg" alt="Baby John">
+            <img src="the-mehta-boys-movie-review-1.jpg" alt="The Mehta Boys">
+            <img src="my-fault-london-prime-video.webp" alt="My Fault London">
+            <img src="Reacher.jpeg" alt="Reacher">
+            <img src="Surya.jpeg" alt="Surya 2">
+        </div>
+    </div>
+
     <footer>
-        <p>&copy; 2025 Amazon Prime. All Rights Reserved.</p>
+        <p>&copy; 2025 Prime Video. All Rights Reserved.</p>
     </footer>
 
+    <script>
+        document.getElementById('language-toggle').addEventListener('click', function() {
+            document.getElementById('language-menu').classList.toggle('show');
+        });
+    </script>
 </body>
 </html>
