@@ -18,9 +18,9 @@
             color: white;
         }
 
-        /* Header Section */
+        /* Header Section with Gradient */
         header {
-            background: #131921;
+            background: linear-gradient(to right, #131921, #1a1f2b);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -52,59 +52,34 @@
             color: #f2a900;
         }
 
-        .nav-icon {
-            font-size: 1.2em;
-            color: white;
-            cursor: pointer;
+        .search-bar {
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+            font-size: 1em;
+            display: none;
         }
 
         .join-prime {
-            background: #0073e6;
+            background: linear-gradient(to right, #0073e6, #005bb5);
             color: white;
             padding: 10px 15px;
             border-radius: 5px;
             text-decoration: none;
+            transition: 0.3s;
         }
 
         .join-prime:hover {
-            background: #005bb5;
+            background: linear-gradient(to right, #005bb5, #004494);
         }
 
-        /* Language Dropdown */
-        .language-menu {
-            display: none;
-            position: absolute;
-            top: 50px;
-            right: 150px;
-            background: rgba(30, 30, 30, 0.9);
-            padding: 15px;
-            border-radius: 10px;
-            width: 300px;
-            max-height: 400px;
-            overflow-y: auto;
-        }
-
-        .language-menu.show {
-            display: block;
-        }
-
-        .language-menu div {
-            padding: 8px;
-            color: white;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        .language-menu div:hover {
-            color: #f2a900;
-        }
-
-        /* Hero Section */
+        /* Hero Section with Gradient */
         .hero {
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: 50px 10%;
+            background: linear-gradient(to bottom, #000, #131921);
         }
 
         .hero-text {
@@ -122,16 +97,17 @@
         }
 
         .hero-text .btn {
-            background: white;
+            background: linear-gradient(to right, white, #f2a900);
             color: black;
             padding: 10px 15px;
             font-size: 1em;
             text-decoration: none;
             border-radius: 5px;
+            transition: 0.3s;
         }
 
         .hero-text .btn:hover {
-            background: #f2a900;
+            background: linear-gradient(to right, #f2a900, #d38f00);
         }
 
         .hero-images {
@@ -167,6 +143,17 @@
             }
         }
     </style>
+    <script>
+        function toggleSearch() {
+            var searchBar = document.getElementById('search-bar');
+            if (searchBar.style.display === 'none' || searchBar.style.display === '') {
+                searchBar.style.display = 'block';
+                searchBar.focus();
+            } else {
+                searchBar.style.display = 'none';
+            }
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -177,31 +164,18 @@
             <a href="#">TV Shows</a>
             <a href="#">Live TV</a>
             <a href="#"><span class="nav-icon">&#x229E;</span> Subscriptions</a>
-            <span class="nav-icon">🔍</span>
+            <input type="text" id="search-bar" class="search-bar" placeholder="Search...">
+            <span class="nav-icon" onclick="toggleSearch()">🔍</span>
             <span class="nav-icon" id="language-toggle">🌐 EN ▼</span>
             <span class="nav-icon">⏹️</span>
             <a href="#" class="join-prime">Join Prime</a>
         </nav>
     </header>
 
-    <div class="language-menu" id="language-menu">
-        <div>English</div>
-        <div>Español</div>
-        <div>Français</div>
-        <div>Deutsch</div>
-        <div>हिन्दी</div>
-        <div>中文</div>
-        <div>العربية</div>
-        <div>Português</div>
-        <div>Русский</div>
-        <div>日本語</div>
-        <div>한국어</div>
-    </div>
-
     <div class="hero">
         <div class="hero-text">
             <h1>Welcome to Prime Video</h1>
-            <p>Join Prime to watch the latest movies, TV shows and award-winning Amazon Originals</p>
+            <p>Join Prime to watch the latest movies, TV shows, and award-winning Amazon Originals</p>
             <a href="#" class="btn">Sign in to join Prime</a>
         </div>
         <div class="hero-images">
@@ -217,11 +191,5 @@
     <footer>
         <p>&copy; 2025 Prime Video. All Rights Reserved.</p>
     </footer>
-
-    <script>
-        document.getElementById('language-toggle').addEventListener('click', function() {
-            document.getElementById('language-menu').classList.toggle('show');
-        });
-    </script>
 </body>
 </html>
