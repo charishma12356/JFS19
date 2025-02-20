@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Video</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: #000;
+            color: white;
+        }
+        .hero {
+            background: linear-gradient(to bottom, #000, #131921);
+            padding: 50px 10%;
+        }
+        .hero img {
+            width: 150px;
+            height: 220px;
+            border-radius: 5px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(to right, #131921, #1a1f2b);">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Prime Video</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Movies</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">TV Shows</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Live TV</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Subscriptions</a></li>
+                </ul>
+                <input type="text" class="form-control me-2 d-none" id="search-bar" placeholder="Search...">
+                <button class="btn btn-outline-light" onclick="toggleSearch()">🔍</button>
+                <a href="#" class="btn btn-primary ms-3">Join Prime</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="hero text-center text-lg-start">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1>Welcome to Prime Video</h1>
+                <p>Join Prime to watch the latest movies, TV shows, and award-winning Amazon Originals</p>
+                <a href="#" class="btn btn-warning">Sign in to join Prime</a>
+            </div>
+            <div class="col-lg-6 d-flex flex-wrap gap-2 justify-content-center justify-content-lg-start">
+                <img src="gamechangers.jpg" alt="Game Changer">
+                <img src="BABYJHON.jpeg" alt="Baby John">
+                <img src="the-mehta-boys-movie-review-1.jpg" alt="The Mehta Boys">
+                <img src="my-fault-london-prime-video.webp" alt="My Fault London">
+                <img src="Reacher.jpeg" alt="Reacher">
+                <img src="Surya.jpeg" alt="Surya 2">
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center p-3" style="background: #131921;">
+        <p>&copy; 2025 Prime Video. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function toggleSearch() {
+            var searchBar = document.getElementById('search-bar');
+            searchBar.classList.toggle('d-none');
+            if (!searchBar.classList.contains('d-none')) searchBar.focus();
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
